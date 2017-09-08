@@ -57,7 +57,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       if (state[i]!=st) {
         state[i]=st;
         // Radio send
-        int remote = LIV_PULT+i;
+        int remote = ((LIV_PULT+i)*3)+1;
         int code = CODE_OFF;
         if (state[i]==1) { code=CODE_ON; }
         #ifdef DEBUG
